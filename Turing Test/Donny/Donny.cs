@@ -8,5 +8,25 @@ namespace Donny
 {
     class Donny
     {
+        Database database;
+
+        public Donny()
+        {
+            database = new Database();
+        }
+
+        public void MainLoop()
+        {
+            //greet user
+            while(true)
+            {
+                //get question
+                //parse question
+                //query database
+                //construct response
+                //respond
+            }
+        }
+
     }
 }

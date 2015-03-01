@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Donny
 {
-    class Parser
+    static class Parser
     {
+
+        public string[] ParseQuestion(string question, Database database)
+        {
+            string[] words = question.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);
+            string[] keywords = (string[])words.Where(word => database.IdentifyKeyword(word));
+            keywords = (string[])keywords.Distinct();
+            return keywords;
+        }
+
     }
 }

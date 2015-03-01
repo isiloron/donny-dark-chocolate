@@ -10,6 +10,8 @@ namespace Donny
     {
         static void Main(string[] args)
         {
+            Donny donny = new Donny();
+            donny.MainLoop();
         }
     }
 }
