@@ -26,6 +26,7 @@ namespace Donny
         public Database()
         {
             // initialize database
+            throw new NotImplementedException();
         }
 
         //returns true of word is a keyword according to the database

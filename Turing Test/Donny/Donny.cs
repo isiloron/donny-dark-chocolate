@@ -17,6 +17,7 @@ namespace Donny
 
         public void MainLoop()
         {
+            throw new NotImplementedException();
             //greet user
             while(true)
             {
