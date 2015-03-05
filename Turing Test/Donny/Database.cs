@@ -12,8 +12,10 @@ namespace Donny
     {
         public class Entry
         {
-            [XmlElement("keyword")]
+            [XmlIgnore]
             public string[] keywords;
+            [XmlElement("keywords")]
+            public string keywordsAsString;
             public string answer;
 
             public Entry()
@@ -24,6 +26,7 @@ namespace Donny
             public Entry(string[] keywords, string answer)
             {
                 this.keywords = keywords;
+                keywordsAsString = string.Join(",", keywords);
                 this.answer = answer;
             }
         }
@@ -81,19 +84,21 @@ namespace Donny
             FileStream fs;
             XmlSerializer serializer = new XmlSerializer(typeof(List<Entry>));
 
-            /*
-             * //Serialize
+             //serialize
             database.Add(new Entry(new string[] { "a", "b", "c" }, "1"));
-            fs = new FileStream("TestDatabase.xml", FileMode.Create);
+            fs = new FileStream("DonnyDatabase.xml", FileMode.Create);
             serializer.Serialize(fs, database);
-            database.Clear();
             fs.Close();
-            */
+            database.Clear();
 
             //Deserialize
-            fs = new FileStream("TestDatabase.xml", FileMode.Open);
+            fs = new FileStream("DonnyDatabase.xml", FileMode.Open);
             database = (List<Entry>)serializer.Deserialize(fs);
             fs.Close();
+            foreach(Entry e in database)
+            {
+                e.keywords = e.keywordsAsString.Split(new string[]{","}, StringSplitOptions.RemoveEmptyEntries);
+            }
         }
 
         //returns true of word is a keyword according to the database
