@@ -1,7 +1,16 @@
 <?xml version="1.0"?>
 <ArrayOfEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Entry>
-    <keywords>a,b,c</keywords>
+    <keywords>a</keywords>
     <answer>1</answer>
   </Entry>
+  <Entry>
+    <keywords>a,b</keywords>
+    <answer>2</answer>
+  </Entry>
+  <Entry>
+    <keywords>a,b,c</keywords>
+    <answer>3</answer>
+  </Entry>
+  
 </ArrayOfEntry>

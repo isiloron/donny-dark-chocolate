@@ -17,10 +17,12 @@ namespace Donny
             [XmlElement("keywords")]
             public string keywordsAsString;
             public string answer;
+            [XmlIgnore]
+            public bool used;
 
             public Entry()
             {
-
+                used = false;
             }
 
             public Entry(string[] keywords, string answer)
@@ -28,6 +30,17 @@ namespace Donny
                 this.keywords = keywords;
                 keywordsAsString = string.Join(",", keywords);
                 this.answer = answer;
+                used = false;
+            }
+
+            public void UseQuestion()
+            {
+                used = true;
+            }
+
+            public bool Used
+            {
+                get { return used; }
             }
         }
 
@@ -84,12 +97,13 @@ namespace Donny
             FileStream fs;
             XmlSerializer serializer = new XmlSerializer(typeof(List<Entry>));
 
-             //serialize
-            database.Add(new Entry(new string[] { "a", "b", "c" }, "1"));
-            fs = new FileStream("DonnyDatabase.xml", FileMode.Create);
-            serializer.Serialize(fs, database);
-            fs.Close();
-            database.Clear();
+            // //serialize
+            //database.Add(new Entry(new string[] { "a", "b", "c" }, "1"));
+            //fs = new FileStream("DonnyDatabase.xml", FileMode.Create);
+            //serializer.Serialize(fs, database);
+            //fs.Close();
+            //database.Clear();
+
 
             //Deserialize
             fs = new FileStream("DonnyDatabase.xml", FileMode.Open);
@@ -115,18 +129,21 @@ namespace Donny
             // Find each entry that match any specified keyword. More matching keywords increase the answer relevence
             foreach (Entry entry in database)
             {
-                FoundAnswer answer = new FoundAnswer(entry);
+                //Question not already used?
+                if(!entry.Used) {
+                    FoundAnswer answer = new FoundAnswer(entry);
 
-                IEnumerable<string> matchingKeywords = entry.keywords.Intersect(keywords);
+                    IEnumerable<string> matchingKeywords = entry.keywords.Intersect(keywords);
 
-                foreach (String s in matchingKeywords)
-                {
-                    answer.IncreaseRelevance();
-                }
+                    foreach (String s in matchingKeywords)
+                    {
+                        answer.IncreaseRelevance();
+                    }
 
-                if (answer.Relevance > 0)
-                {
-                    foundAnswers.Add(answer);
+                    if (answer.Relevance > 0)
+                    {
+                        foundAnswers.Add(answer);
+                    }
                 }
             }
 
@@ -138,6 +155,7 @@ namespace Donny
             if (foundAnswers.Count() > 0)
             {
                 theAnswer = foundAnswers[0].Entry.answer;
+                foundAnswers[0].Entry.UseQuestion();
             }
 
             return theAnswer;
