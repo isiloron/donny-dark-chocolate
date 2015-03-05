@@ -1,17 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Donny
 {
-    class Database
+    public class Database
     {
-        class Entry
+        public class Entry
         {
-            string[] keywords;
-            string answer;
+            [XmlElement("keyword")]
+            public string[] keywords;
+            public string answer;
+
+            public Entry()
+            {
+
+            }
 
             public Entry(string[] keywords, string answer)
             {
@@ -20,13 +28,31 @@ namespace Donny
             }
         }
 
+        
         List<Entry> database;
         List<Entry> temporaryMemory;
 
         public Database()
         {
             // initialize database
-            throw new NotImplementedException();
+            database = new List<Entry>();
+
+            FileStream fs;
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Entry>));
+
+            /*
+             * //Serialize
+            database.Add(new Entry(new string[] { "a", "b", "c" }, "1"));
+            fs = new FileStream("TestDatabase.xml", FileMode.Create);
+            serializer.Serialize(fs, database);
+            database.Clear();
+            fs.Close();
+            */
+
+            //Deserialize
+            fs = new FileStream("TestDatabase.xml", FileMode.Open);
+            database = (List<Entry>)serializer.Deserialize(fs);
+            fs.Close();
         }
 
         //returns true of word is a keyword according to the database
