@@ -17,15 +17,23 @@ namespace Donny
 
         public void MainLoop()
         {
-            throw new NotImplementedException();
             //greet user
+            Console.WriteLine("Hej!");
+
+            //answer questions
             while(true)
             {
                 //get question
+                string question = Console.ReadLine();
+
                 //parse question
+                string[] keywords = Parser.ParseQuestion(question, database);
+
                 //query database
-                //construct response
+                string answer = database.GetAnswer(keywords);
+
                 //respond
+                Console.WriteLine(answer);
             }
         }
 
