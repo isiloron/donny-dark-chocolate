@@ -37,27 +37,22 @@ namespace Donny
 
         public Database()
         {
-            // initialize database
-            database = new List<Entry>();
-
-            FileStream fs;
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Entry>));
-
-             //serialize
-            database.Add(new Entry(new string[] { "a", "b", "c" }, "1"));
-            fs = new FileStream("DonnyDatabase.xml", FileMode.Create);
-            serializer.Serialize(fs, database);
-            fs.Close();
-            database.Clear();
-
             //Deserialize
-            fs = new FileStream("DonnyDatabase.xml", FileMode.Open);
+            FileStream fs = new FileStream("DonnyDatabase.xml", FileMode.Open);
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Entry>));
             database = (List<Entry>)serializer.Deserialize(fs);
             fs.Close();
             foreach(Entry e in database)
             {
                 e.keywords = e.keywordsAsString.Split(new string[]{","}, StringSplitOptions.RemoveEmptyEntries);
             }
+            
+            // //serialize
+            //database.Add(new Entry(new string[] { "a", "b", "c" }, "1"));
+            //fs = new FileStream("DonnyDatabase.xml", FileMode.Create);
+            //serializer.Serialize(fs, database);
+            //fs.Close();
+            //database.Clear();
         }
 
         //returns true of word is a keyword according to the database
