@@ -13,12 +13,12 @@ namespace Donny
         public class Entry
         {
             [XmlIgnore]
-            public string[] keywords;
+            string[] keywords;
             [XmlElement("keywords")]
             public string keywordsAsString;
             public string answer;
             [XmlIgnore]
-            public bool used;
+            bool used;
 
             public Entry()
             {
@@ -38,6 +38,12 @@ namespace Donny
                 used = true;
             }
 
+            public string[] Keywords
+            {
+                set { keywords = value; }
+                get { return keywords; }
+            }
+
             public bool Used
             {
                 get { return used; }
@@ -54,11 +60,6 @@ namespace Donny
                 this.entry = entry;
                 relevance = 0;
             }
-
-            public void IncreaseRelevance()
-            {
-                ++relevance;
-            } 
 
             public int CompareTo(FoundAnswer other)
             {
@@ -102,8 +103,8 @@ namespace Donny
             keywordsInDatabase = new List<string>();
             foreach(Entry e in database)
             {
-                e.keywords = e.keywordsAsString.Split(new string[]{","}, StringSplitOptions.RemoveEmptyEntries);
-                keywordsInDatabase = e.keywords.Union(keywordsInDatabase).ToList<string>();
+                e.Keywords = e.keywordsAsString.Split(new string[]{","}, StringSplitOptions.RemoveEmptyEntries);
+                keywordsInDatabase = e.Keywords.Union(keywordsInDatabase).ToList<string>();
             }
             
             // //serialize
@@ -131,14 +132,8 @@ namespace Donny
                 //Question not already used?
                 if(!entry.Used) {
                     FoundAnswer answer = new FoundAnswer(entry);
-
-                    IEnumerable<string> matchingKeywords = entry.keywords.Intersect(keywords);
-
-                    foreach (String s in matchingKeywords)
-                    {
-                        answer.IncreaseRelevance();
-                    }
-
+                    IEnumerable<string> matchingKeywords = entry.Keywords.Intersect(keywords);
+                    answer.Relevance = matchingKeywords.Count();
                     if (answer.Relevance > 0)
                     {
                         foundAnswers.Add(answer);
@@ -148,9 +143,7 @@ namespace Donny
 
             // Sort the answer, putting the most relevant answer at the top
             foundAnswers.Sort();
-
             string theAnswer = "";
-
             if (foundAnswers.Count() > 0)
             {
                 theAnswer = foundAnswers[0].Entry.answer;
