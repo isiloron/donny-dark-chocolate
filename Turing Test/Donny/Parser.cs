@@ -11,9 +11,10 @@ namespace Donny
 
         static public string[] ParseQuestion(string question, Database database)
         {
-            string[] words = question.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);
-            string[] keywords = (string[])words.Where(word => database.IdentifyKeyword(word));
-            keywords = (string[])keywords.Distinct();
+            string[] separators = { ",", ".", "!", "?", ";", ":", " " };
+            string[] words = question.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            string[] keywords = words.Where(word => database.IdentifyKeyword(word)).ToArray<string>();
+            keywords = keywords.Distinct().ToArray<string>();
             return keywords;
         }
 

@@ -85,7 +85,7 @@ namespace Donny
             }
         }
 
-        
+        List<string> keywordsInDatabase;
         List<Entry> database;
         List<Entry> temporaryMemory;
 
@@ -96,9 +96,11 @@ namespace Donny
             XmlSerializer serializer = new XmlSerializer(typeof(List<Entry>));
             database = (List<Entry>)serializer.Deserialize(fs);
             fs.Close();
+            keywordsInDatabase = new List<string>();
             foreach(Entry e in database)
             {
                 e.keywords = e.keywordsAsString.Split(new string[]{","}, StringSplitOptions.RemoveEmptyEntries);
+                keywordsInDatabase = e.keywords.Union(keywordsInDatabase).ToList<string>();
             }
             
             // //serialize
@@ -112,7 +114,7 @@ namespace Donny
         //returns true of word is a keyword according to the database
         public bool IdentifyKeyword(string word)
         {
-            throw new NotImplementedException();
+            return keywordsInDatabase.Contains(word);
         }
         
         //returns best fitting answer from the database based on the keywords
