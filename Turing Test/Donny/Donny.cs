@@ -26,6 +26,12 @@ namespace Donny
                 //get question
                 string question = Console.ReadLine();
 
+                if(question.ToLowerInvariant().Contains("hejdå"))
+                {
+                    Console.WriteLine("Hejdå!");
+                    break;
+                }
+
                 //parse question
                 string[] keywords = Parser.ParseQuestion(question, database);
                 

@@ -13,7 +13,7 @@ namespace Donny
         {
             string[] separators = { ",", ".", "!", "?", ";", ":", " " };
             string[] words = question.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-            string[] keywords = words.Where(word => database.IdentifyKeyword(word)).ToArray<string>();
+            string[] keywords = words.Where( word => database.IdentifyKeyword(word) ).ToArray<string>();
             keywords = keywords.Distinct().ToArray<string>();
             return keywords;
         }

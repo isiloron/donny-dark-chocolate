@@ -55,7 +55,8 @@ namespace Donny
                 relevance = 0;
             }
 
-            public void IncreaseRelevance() {
+            public void IncreaseRelevance()
+            {
                 ++relevance;
             } 
 
@@ -68,7 +69,9 @@ namespace Donny
                 else if (relevance > other.relevance)
                 {
                     return -1;
-                } else {
+                }
+                else
+                {
                     return 0;
                 }
             }

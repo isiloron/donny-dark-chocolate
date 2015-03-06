@@ -12,6 +12,7 @@ namespace Donny
         {
             Donny donny = new Donny();
             donny.MainLoop();
+            Console.ReadKey();
         }
     }
 }
