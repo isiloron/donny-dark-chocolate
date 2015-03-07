@@ -143,11 +143,15 @@ namespace Donny
 
             // Sort the answer, putting the most relevant answer at the top
             foundAnswers.Sort();
-            string theAnswer = "";
+            string theAnswer;
             if (foundAnswers.Count() > 0)
             {
                 theAnswer = foundAnswers[0].Entry.answer;
                 foundAnswers[0].Entry.UseQuestion();
+            }
+            else 
+            {
+                theAnswer = "Jag vet inte vad du pratar om.";
             }
 
             return theAnswer;
