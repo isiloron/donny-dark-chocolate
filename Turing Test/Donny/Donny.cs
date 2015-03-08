@@ -39,7 +39,7 @@ namespace Donny
                 string answer = database.GetAnswer(keywords);
 
                 //respond
-                Console.WriteLine(answer);
+                Console.WriteLine(answer + Environment.NewLine);
             }
         }
 
