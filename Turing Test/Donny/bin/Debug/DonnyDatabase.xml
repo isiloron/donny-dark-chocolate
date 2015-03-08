@@ -13,4 +13,145 @@
     <answer>3</answer>
   </Entry>
   
+  <Entry>
+    <keywords>du,heter</keywords>
+    <answer>Jag är Donny såklart!</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>hur,skapas,information</keywords>
+    <answer>Jag är ganska säker på att information kan härledas från data, eller genom observationer av aktörer som besitter kunskap inom området. Men jag kan ju ha fel...:P</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>hur,skapas,data</keywords>
+    <answer>Data utvinns ur information med det kan också tas fram genom observativa mätningar.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>hur,skapas,kunskap</keywords>
+    <answer>Ja det kan ju uppfattas som lite luddigt... men aktörer kan härleda och sortera ut kunskap ur information liksom. Hoppas du fattar vad jag menar:P</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>skiljer,skillnaden,kunskap,vetenskap</keywords>
+    <answer>Vetenskap, ja där är det lite hårdare och lite striktare:P Den måste byggas på vetenskaplig grund och genom objektiva experiment, och det finns en massa nissar i kostym och med stora glasögon som sitter och bestämmer hurvida kunskap "får vara det" eller inte. Vetenskap anses som sanning! Punkt! Eller iaf bästa möjliga förklaring på ett fenomen. Kunskap behöver inte vara sant, eller bygga på vetenskaplig grund. Den är alltså lite sämre :P</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>vad,beskriv,vetenskap</keywords>
+    <answer>Ehum.. ja du, vetenskap är systematiskt företagande som bygger och organiserar kunskap i form av testbara förklaringar och förutsägelser om naturen och universum. Didn't google that at all...</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>vad,beskriv,information</keywords>
+    <answer>Information består ofta men inte alltid av en hög med fakta. Information är innehållet i de meddelanden som utväxlas. Typ som en bok eller databas.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>vad,beskriv,data</keywords>
+    <answer>Data är små bitar av information. ENsamt data är oförståerlig och kan ju vara missvisande.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>skillnad,skillnaden,skiljer,information,kunskap</keywords>
+    <answer>Kunskap är endast individuell, och finns bara hos betraktaren. Information är å andra sidan en avbildning av datat, typ ett foto.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>hur,blir,information,kunskap</keywords>
+    <answer>Information blir kunskap först när aktören tar ställning till informationen. Aktören utvärderar den och väljer hurvida hen vill förkasta den, eller acceptera den. Med andra ord, sätt in informationen i ett begripligt sammanhang, så förädlas den till kunskap.</answer>
+  </Entry>
+  <Entry>
+    <keywords>hur,blir,data,kunskap</keywords>
+    <answer>När data tolkas eller avbildas, skapas information hos aktören. Information blir kunskap först när aktören tar ställning till informationen. Aktören utvärderar den och väljer hurvida hen vill förkasta den, eller acceptera den.</answer>
+  </Entry>
+  
+   <Entry>
+    <keywords>skillnad,skillnaden,skiljer,data,information</keywords>
+    <answer>Data är ett mätetal av verkligheten, alltid sann och kan inte gå förlorad. Information är dock en avbildning och tolkning av data, och därav kan informationen feltolkas eller bli korrupt. </answer>
+  </Entry>
+  
+   <Entry>
+    <keywords>beskriv,definition,definera,vad,kunskap</keywords>
+    <answer>Kunskap är teoretisk och/eller praktisk förståelse av ett ämne. Det finns huvudsakligen tre typer av kunskap. Episteme, Techne och phronesis.</answer>
+  </Entry>
+  
+   <Entry>
+    <keywords>vad,beskriv,episteme,definition,definera</keywords>
+    <answer>Episteme är teoretisk kunskap.</answer>
+  </Entry>
+  
+     <Entry>
+    <keywords>vad,beskriv,techne,definition,definera</keywords>
+    <answer>Techne är kunskap knuten till hantverk och kreativt kunnande.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>vad,beskriv,phronesis,definition,definera</keywords>
+    <answer>Phronesis är etiskt och politiskt kunnande.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>episteme,phronesis,skillnaden,skillnad</keywords>
+    <answer>Phronesis är etiskt och politiskt kunnande. Episteme är teoretisk kunskap.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>techne,phronesis,skillnaden,skillnad</keywords>
+    <answer>Phronesis är etiskt och politiskt kunnande. Techne är kunskap knuten till hantverk och kreativt kunnande.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>techne,episteme,skillnaden,skillnad</keywords>
+    <answer>Episteme är teoretisk kunskap. Techne är kunskap knuten till hantverk och kreativt kunnande.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>data,information,hur,blir</keywords>
+    <answer>När data tolkas eller avbildas, skapas information hos aktören.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>syfte,pyramid,kunskapspyramiden</keywords>
+    <answer>Syftet är att visualisera den lärandeprocessen.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>informationsvarelse,inforg,vad,beskriv,förklara,betyder</keywords>
+    <answer>INFORG står för "Informationally Embodied Organisms", och betecknar en entitet som består av, eller är uppbyggd av information. En inforg är en del av/tilhör en "infosphere". Benämns även som informationsvarelse.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>infosphere,vad,beskriv,definera,förklara</keywords>
+    <answer>En infosphere är en miljö som utgörs av information, eller så kallade "inforgs. Internet är ett vanligt exempel, där cyberspace representerar infosphere, och alla människor online är inforgs.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>deduktion,vad,beskriv,definera,förklara</keywords>
+    <answer>Deduktion är att härleda slutsatser från givna förhållanden och regler. Exempelvis om påstående "P" gäller, så gäller även påstående "Q".</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>emperi,vad,beskriv,definera,förklara</keywords>
+    <answer>Emperi är att härleda slutsatser från erfarenheter,iaktagelser och experiment.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>giganternas,axlar,stå,på,vad,beskriv,definera,förklara,betyder,betydelse</keywords>
+    <answer>"Att stå på giganternas axlar" implicerar att grunda sin forskning på tidigare gjord forskning.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>lärande,läraktig,agent,vad,beskriv,definera,förklara</keywords>
+    <answer>En lärande agent är en organism som kan förbättra sitt befintliga kunnande, inhämta nytt kunnande, samt anpassa sig till förändrade förutsättningar och miljö.</answer>
+  </Entry>
+  
+  <Entry>
+    <keywords>varför,vetenskap,behövs,nytta</keywords>
+    <answer>Ja du, det är ju först och främst broende på om du är troende eller inte som gör den här frågan intressant ;P Från en vetenskapsmans perspektiv upplevs vetenskapen som positiv i den bemärkelsen att han/hon inte behöver lära om sig allt från början, utan hen kan stå på befintlig kunskap och utgå från den i sin fortsatta forskning. Vetenskap bevarar och plockar fram det närmaste vi kan komma sanning. Vad tycker du?:)</answer>
+  </Entry>
+  
+  
+  
 </ArrayOfEntry>
