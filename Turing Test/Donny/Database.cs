@@ -103,7 +103,8 @@ namespace Donny
             keywordsInDatabase = new List<string>();
             foreach(Entry e in database)
             {
-                e.Keywords = e.keywordsAsString.Split(new string[]{","}, StringSplitOptions.RemoveEmptyEntries);
+                e.keywordsAsString = e.keywordsAsString.ToLowerInvariant();
+                e.Keywords = e.keywordsAsString.Split(new string[]{","," "}, StringSplitOptions.RemoveEmptyEntries);
                 keywordsInDatabase = e.Keywords.Union(keywordsInDatabase).ToList<string>();
             }
             
